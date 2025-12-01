@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/logo_filltime"
+                android:contentDescription="logo" />
+
+            <TextView
+                android:id="@+id/brandFillTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="FillTime"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#111827" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="N"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:background="#EEF2FF" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Olá, Nome!"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#111827" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Gerencie seus recursos, agendamentos e acompanhe o desempenho do seu negócio"
+            android:textColor="#6B7280" />
+
+        <Spinner
+            android:id="@+id/spinnerPeriodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:entries="@array/dashboard_periodos" />
+
+        <!-- Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receita Total"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 24.750"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="4dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#E0ECFF"
+                    android:contentDescription="chart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardAgendamentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agendamentos"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="324"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="4dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#DCFCE7"
+                    android:contentDescription="chart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxa de Ocupação"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="68%"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="4dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#FFE4D6"
+                    android:contentDescription="chart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Horários Vagos"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="4dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#F3F4F6"
+                    android:contentDescription="chart" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+
